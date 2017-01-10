@@ -82,8 +82,8 @@ jhipster:
             # security key (this key should be unique for your application, and kept secret)
             key: cb6a47501134bee740d4f6fefd56f7a549da178a
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: hlorka@localhost
-        baseUrl: http://my-server-url-to-change # Modify according to your server's URL
+        from: dbilenkin@gmail.com
+        baseUrl: http://hlorka.herokuapp.com # Modify according to your server's URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         graphite:
