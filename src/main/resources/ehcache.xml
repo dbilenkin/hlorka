@@ -22,5 +22,9 @@
 
     <cache alias="com.hlorka.social.SocialUserConnection" uses-template="simple"/>
 
+    <cache alias="com.hlorka.domain.Game" uses-template="simple"/>
+
+    <cache alias="com.hlorka.domain.Game.users" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

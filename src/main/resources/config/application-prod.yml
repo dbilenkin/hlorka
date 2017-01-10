@@ -44,10 +44,15 @@ spring:
         jcache:
             config: ehcache.xml
     mail:
-        host: localhost
-        port: 25
-        username:
-        password:
+        host: smtp.gmail.com
+        port: 587
+        username: dbilenkin@gmail.com
+        password: as77db1A
+        protocol: smtp
+        tls: true
+        properties.mail.smtp:
+            auth: true
+            starttls.enable: true
     thymeleaf:
         cache: true
 
