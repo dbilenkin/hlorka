@@ -32,7 +32,7 @@ public class HlorkaApp {
     private Environment env;
 
     /**
-     * Initializes hlorka.
+     * Initializes hlorka. hi.
      * <p>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p>
