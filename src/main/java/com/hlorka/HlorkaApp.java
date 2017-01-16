@@ -26,6 +26,7 @@ import java.util.Collection;
 @EnableConfigurationProperties({ JHipsterProperties.class, LiquibaseProperties.class })
 public class HlorkaApp {
 
+    // this is awesome
     private static final Logger log = LoggerFactory.getLogger(HlorkaApp.class);
 
     @Inject
