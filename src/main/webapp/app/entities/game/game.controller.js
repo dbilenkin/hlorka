@@ -13,9 +13,7 @@
         vm.games = [];
 
         JhiTrackerService.receive().then(null, null, function(game) {
-            if (game.name) {
-                loadAll();
-            }
+            loadAll();
 
         });
 

@@ -58,6 +58,7 @@ public class GameServiceImpl implements GameService {
     @Override
     public void deleteGame(int gameId) {
         games.remove(gameId);
+        eventHandler.onGameDeleted();
     }
 
 }
