@@ -26,13 +26,14 @@ import java.util.Collection;
 @EnableConfigurationProperties({ JHipsterProperties.class, LiquibaseProperties.class })
 public class HlorkaApp {
 
+    // this is awesome
     private static final Logger log = LoggerFactory.getLogger(HlorkaApp.class);
 
     @Inject
     private Environment env;
 
     /**
-     * Initializes hlorka.
+     * Initializes hlorka. hi.
      * <p>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p>
