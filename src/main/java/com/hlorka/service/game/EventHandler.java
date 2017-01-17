@@ -9,5 +9,5 @@ public interface EventHandler {
 
     void onGameCreated(Game game);
     void onGameJoined(Game game);
-    void onGameDeleted();
+    void onGameDeleted(Game game);
 }
