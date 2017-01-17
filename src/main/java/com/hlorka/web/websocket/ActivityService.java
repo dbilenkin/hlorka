@@ -13,13 +13,12 @@ import org.springframework.messaging.simp.stomp.StompHeaderAccessor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
+import javax.inject.Inject;
+import java.security.Principal;
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import javax.inject.Inject;
-import java.security.Principal;
 import java.util.Calendar;
 
 import static com.hlorka.config.WebsocketConfiguration.IP_ADDRESS;
@@ -44,7 +43,7 @@ public class ActivityService implements ApplicationListener<SessionDisconnectEve
         Instant instant = Instant.ofEpochMilli(Calendar.getInstance().getTimeInMillis());
         activityDTO.setTime(dateTimeFormatter.format(ZonedDateTime.ofInstant(instant, ZoneOffset.systemDefault())));
         log.debug("Sending user tracking data {}", activityDTO);
-        return activityDTO;
+        return null;
     }
 
     @Override

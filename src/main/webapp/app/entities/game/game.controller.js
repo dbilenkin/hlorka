@@ -5,12 +5,19 @@
         .module('hlorkaApp')
         .controller('GameController', GameController);
 
-    GameController.$inject = ['$scope', '$state', 'Game'];
+    GameController.$inject = ['$scope', '$state', 'Game', 'JhiTrackerService'];
 
-    function GameController ($scope, $state, Game) {
+    function GameController ($scope, $state, Game, JhiTrackerService) {
         var vm = this;
 
         vm.games = [];
+
+        JhiTrackerService.receive().then(null, null, function(game) {
+            if (game.name) {
+                loadAll();
+            }
+
+        });
 
         vm.join = join;
 

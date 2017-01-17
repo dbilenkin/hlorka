@@ -24,7 +24,13 @@
                 }
             },
             resolve: {
-            }
+            },
+            onEnter: ['JhiTrackerService', function(JhiTrackerService) {
+                JhiTrackerService.subscribe('game');
+            }],
+            onExit: ['JhiTrackerService', function(JhiTrackerService) {
+                JhiTrackerService.unsubscribe();
+            }]
         })
         .state('game-detail', {
             parent: 'entity',

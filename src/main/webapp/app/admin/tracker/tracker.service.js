@@ -72,9 +72,11 @@
             }
         }
 
-        function subscribe () {
+
+        function subscribe (topic) {
+            if (!topic) topic = 'tracker';
             connected.promise.then(function() {
-                subscriber = stompClient.subscribe('/topic/tracker', function(data) {
+                subscriber = stompClient.subscribe('/topic/' + topic, function(data) {
                     listener.notify(angular.fromJson(data.body));
                 });
             }, null, null);
